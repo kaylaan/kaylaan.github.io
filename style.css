@@ -1,0 +1,316 @@
+/* GENERAL */
+
+@font-face {
+	font-family: 'Pixel Operator';
+	src: url('fonts/PixelOperator.woff');
+}
+
+@font-face {
+	font-family: 'Pixel Operator Bold';
+	src: url('fonts/PixelOperator-Bold.woff');
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fce6f5;
+	margin: 0;
+}
+
+.browse {
+	background-color: white;
+}
+
+svg.menu {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 20px;
+	top: 40px;
+}
+
+h2, p, nav > a, form {
+	font-family: 'Pixel Operator', sans-serif;
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: #f58318 wavy underline;
+}
+
+a:active {
+	color: #FF35C3;
+}
+
+nav {
+	display: none;
+	flex-direction: column;
+	gap: 1.3em;
+	text-align: right;
+	background-color: #4f4f4e;
+}
+
+h1 {
+	font-family: "owners-xwide", sans-serif;
+	font-weight: 900;
+	font-style: italic;
+}
+
+footer {
+	display: flex;
+/*	gap: 10%;*/
+	text-align: center;
+	font-size: 0.7em;
+	padding: 30px;
+	padding-top: 100px;
+}
+
+footer > a {
+	width: 33%;
+}
+
+footer > a:link, footer > a:visited, footer > a:active, footer > a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+header {
+	z-index: 1;
+	background-color: #4f4f4e;
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	top: 0;
+	padding: 20px;
+}
+
+/* INDEX */
+
+div.video, div.p5 {
+	display: flex;
+	justify-content: center;
+}
+
+video {
+	width: 100%;
+}
+
+.index {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+img.star {
+	position: relative;
+	/*display: block;
+	position: relative;
+	top: 50px;
+	left: 70px;*/
+}
+
+img.clouds {
+	position: relative;
+	right: 250px;
+/*	top: 10%;*/
+}
+
+.figure {
+	display: flex;
+	padding-top: 80px;
+	margin: auto;
+}
+
+.paragraph {
+	width: 80%;
+	padding: 40px;
+	padding-top: 80px;
+}
+
+nav.visibility {
+	display: flex;
+/*	flex-direction: column;*/
+}
+
+polygon.nav:hover {
+	cursor: pointer;
+	fill: #FF35C3;
+}
+
+
+/* BROWSE */
+
+.browse {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-areas: 
+	'a b '
+	'c c '
+	'e f'
+	'd d'
+	'g h'
+	'i i'
+	'k l'
+	'j j'
+	'm n'
+	'o o'
+	'q r'
+	'p p';
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.a {grid-area: a;}
+.b {grid-area: b;}
+.c {grid-area: c;
+margin: 20px;}
+.d {grid-area: d;
+margin: 20px;
+text-align: right;}
+.e {grid-area: e;}
+.f {grid-area: f;}
+.g {grid-area: g;}
+.h {grid-area: h;}
+.i {grid-area: i;
+margin: 20px;}
+.j {grid-area: j;
+margin: 20px;
+text-align: right;}
+.k {grid-area: k;}
+.l {grid-area: l;}
+.m {grid-area: m;}
+.n {grid-area: n;}
+.o {grid-area: o;
+margin: 20px;}
+.p {grid-area: p;
+margin: 20px;
+text-align: right;}
+.q {grid-area: q;}
+.r {grid-area: r;}
+
+.a, .f, .g, .l, .m, .r {
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 1s;
+}
+
+#instructions {
+	padding: 20px;
+	text-align: center;
+}
+
+polygon.st0:hover {
+	cursor: pointer;
+}
+
+svg.e > g > polygon.st0 {
+	fill: #67d60d;
+}
+
+svg.h > g > polygon.st0 {
+	fill: #1469e0;
+}
+
+svg.k > g > polygon.st0 {
+	fill: #FF35C3;
+}
+
+svg.n > g > polygon.st0 {
+	fill: #f58318;
+}
+
+/* QUIZ */
+
+div.p5 {
+	text-align: center;
+	padding: 40px;
+}
+
+.caption {
+	text-align: center;
+	font-size: 0.8em;
+	padding: 30px;
+	margin: auto;
+}
+
+p > a:link, p > a:visited {
+	color: #FF35C3;
+}
+
+/* CONTACT */
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 350px;
+	padding: 40px;
+	margin: auto;
+}
+
+.required {
+	color: red;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 750px) {
+	.browse {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: 
+		'a b c .'
+		'. d e f'
+		'g h i .'
+		'. j k l'
+		'm n o .'
+		'. p q r';
+	}
+}
+
+@media (min-width: 900px) {
+	.index {
+		flex-direction: row;
+	}
+
+	.paragraph {
+		width: 30%;
+		margin-right: auto;
+	}
+
+	.figure {
+		margin-left: auto;
+		width: 40%;
+	}
+
+	svg.menu {
+		display: none;
+	}
+
+	header {
+		flex-direction: row;
+		gap: 25vw;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		margin-top: auto;
+		margin-bottom: auto;
+		gap: 10vw;
+	}
+
+	video {
+		width: 60%;
+	}
+}
